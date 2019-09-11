@@ -33,7 +33,7 @@ class Homepage extends React.Component {
       scrollToApply = () => {
         this.apply.current.scrollIntoView({ behavior: 'smooth' });
         ReactGA.event({
-          category: 'Apply Now Button',
+          category: `Apply Now Button | ${schoolName}`,
           action: 'click',
           label: 'banner'
         })
@@ -42,7 +42,7 @@ class Homepage extends React.Component {
       scrollToApply2 = () => {
         this.apply.current.scrollIntoView({ behavior: 'smooth' });
         ReactGA.event({
-          category: 'Apply Now Button',
+          category: `Apply Now Button | ${schoolName}`,
           action: 'click',
           label: 'getting started'
         })
@@ -51,7 +51,7 @@ class Homepage extends React.Component {
       scrollToApply3 = () => {
         this.apply.current.scrollIntoView({ behavior: 'smooth' });
         ReactGA.event({
-          category: 'Apply Now Button',
+          category: `Apply Now Button | ${schoolName}`,
           action: 'click',
           label: 'footer'
         })

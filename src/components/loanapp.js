@@ -3,7 +3,7 @@ import ReactGA from 'react-ga'
 import ReactPixel from 'react-facebook-pixel'
 import marching from '../images/PeopleMarchColor.png'
 import { UnmountClosed as Collapse } from 'react-collapse'
-import { faq, hubspotFormId, moreThanSixPrograms, programLoanInfo, selectAProgram } from '../constants/programInfo'
+import { faq, hubspotFormId, moreThanSixPrograms, programLoanInfo, schoolName, selectAProgram } from '../constants/programInfo'
 
 const LoanApp = React.forwardRef((props, ref) => {
 
@@ -122,7 +122,7 @@ const LoanApp = React.forwardRef((props, ref) => {
 
     const trackGoogleAnalyticsEvent = () => {
             ReactGA.event({
-                category: 'Apply Now Button',
+                category: `Apply Now Button | ${schoolName}`,
                 action: 'click',
                 label: 'submitted loan application'
             })
