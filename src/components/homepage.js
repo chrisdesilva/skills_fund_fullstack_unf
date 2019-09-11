@@ -42,7 +42,7 @@ class Homepage extends React.Component {
       scrollToApply2 = () => {
         this.apply.current.scrollIntoView({ behavior: 'smooth' });
         ReactGA.event({
-          category: `Apply Now Button | ${schoolName}`,
+          category: `Apply Now Button | ${schoolName}`, 
           action: 'click',
           label: 'getting started'
         })
