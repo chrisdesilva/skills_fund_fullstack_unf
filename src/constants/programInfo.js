@@ -64,7 +64,7 @@ export const faq = { // faq section
     // max loan amounts by program for faq1
     loanRange: [
         {
-            programName: "Fullstack's University of North Florida Coding Bootcamp",
+            programName: "The Coding Bootcamp at UNF",
             maxAmount: "$11,910",
             col: false,
             colAmount: "$6,000"
@@ -78,11 +78,11 @@ export const faq = { // faq section
 
 export const schoolLogo = logo // go to header.js if height needs adjustment
 
-export const schoolName = "Fullstack UNF"
+export const schoolName = "The Coding Bootcamp at UNF"
 
 export const schoolURL = 'https://codingbootcamp.unf.edu/' // update with url of school's website
 
-export const headline = "Learn to Code at Fullstack's University of North Florida Coding Bootcamp" // update headline as appropriate
+export const headline = "Learn to Code at The Coding Bootcamp at UNF" // update headline as appropriate
 
 export const leadContent = {
     header: "Your last step on the path toward changing your career",
@@ -93,7 +93,7 @@ export const threeStepCardText = {
     step1: "",
     step2: {
         header: "select your program",
-        text: "Fullstack and UNF focus exclusively on their Coding Bootcamp."
+        text: "The Coding Bootcamp at UNF partners with Fullstack Academy to provide its part-time program."
     },
     step3: `You'll be on your way to an exciting career in tech as part of ${schoolName}'s powerful network.`
 }
@@ -121,7 +121,7 @@ export const moreThanSixPrograms = false // set to true if there are 7 or more p
 
 export const programLoanInfo = [ // update with program names and corresponding loan URLs with market segment code from Master Loan Parameters
     {
-        name: "University of North Florida Coding Bootcamp",
+        name: "The Coding Bootcamp at UNF",
         url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSFL19",
         loanInfo: { // match loanInfo in first metro below
             maxLoanAmt: 11910,
@@ -310,7 +310,7 @@ export const programLoanInfo = [ // update with program names and corresponding 
 ]
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
-export const programMaxText = "Choose the loan amount that works best for you. Borrow up to $11,910 for Fullstack's University of North Florida Coding Bootcamp tuition."
+export const programMaxText = "Choose the loan amount that works best for you. Borrow up to $11,910 for tuition at The Coding Bootcamp at UNF."
 
 export const paymentTable = {
     headers: ["Program", "Tuition", "Cost of Living", "Max Total"],
