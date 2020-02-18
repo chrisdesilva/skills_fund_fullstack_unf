@@ -72,6 +72,12 @@ export const faq = {
 			maxAmount: '$11,910',
 			col: false,
 			colAmount: '$6,000'
+		},
+		{
+			programName: 'Hybrid UNF Cyber Bootcamp',
+			maxAmount: '$11,910',
+			col: false,
+			colAmount: '$6,000'
 		}
 	]
 };
@@ -99,7 +105,8 @@ export const threeStepCardText = {
 	step1: '',
 	step2: {
 		header: 'select your program',
-		text: 'The Coding Bootcamp at UNF partners with Fullstack Academy to provide its part-time program.'
+		text:
+			'The Coding Bootcamp at UNF partners with Fullstack Academy to provide its Coding Bootcamp and Hybrid Cyber Bootcamp programs.'
 	},
 	step3: `You'll be on your way to an exciting career in tech as part of ${schoolName}'s powerful network.`
 };
@@ -108,9 +115,9 @@ export const netlifyFormName = 'fullstackunf_contact';
 
 export const GATracking = 'UA-68312423-1';
 
-export const hubspotFormId = '5e394e81-24e3-4140-8cb8-6871817e3283'; // create Hubspot form, get form id after publishing
+export const hubspotFormId = 'dae39f42-6ae9-48db-8d86-9d51af0899a8'; // create Hubspot form, get form id after publishing
 
-export const selectAProgram = 'program_name'; // update school name to match form field on Hubspot, *** change to "program_name" if only one program ***"
+export const selectAProgram = 'select_a_fullstackunf_program'; // update school name to match form field on Hubspot, *** change to "program_name" if only one program ***"
 
 // ***** END GENERAL SCHOOL INFO *****
 
@@ -194,36 +201,38 @@ export const programLoanInfo = [
 		]
 	},
 	{
-		name: 'Program 2',
-		url: 'https://my.skills.fund/application?lenderCode=LENDERCODE2',
+		name: 'Hybrid UNF Cyber Bootcamp',
+		url: 'https://my.skills.fund/application?lenderCode=SKFSHNFCB19',
 		loanInfo: {
 			// match loanInfo in first metro below
-			maxLoanAmt: 10995,
+			maxLoanAmt: 11910,
 			loanTerm36: true,
 			loanTerm60: true,
 			'0': {
-				k: 5,
-				apr36: 11.16,
-				apr60: 12.51
+				// interest-only
+				k: 8,
+				apr36: 10.94,
+				apr60: 12.41
 			},
-			'1': null
+			'1': null // immediate repayment
 		},
 		defaultLoanType: '0', // leave at 0 for interest-only, set to 1 for immediate repayment
-		showMetros: false,
-		showLoanTypes: false,
-		locations: [ 'Metro 1', 'Metro 2' ],
+		showMetros: false, // true if there are multiple metros with different tuition amounts for the same program
+		showLoanTypes: false, // true if both IR and IO are available
+		locations: [ 'Metro 1', 'Metro 2', 'Metro 3' ],
 		metros: [
+			// list in same order as locations array above
 			{
 				location: 'Metro 1',
 				loanInfo: {
-					// match loanInfo to Program 2 loanInfo above
-					maxLoanAmt: 10995,
+					// // match loanInfo to Program 1 above
+					maxLoanAmt: 11910,
 					loanTerm36: true,
 					loanTerm60: true,
 					'0': {
-						k: 5,
-						apr36: 11.16,
-						apr60: 12.51
+						k: 8,
+						apr36: 10.94,
+						apr60: 12.41
 					},
 					'1': null
 				}
@@ -241,69 +250,9 @@ export const programLoanInfo = [
 					},
 					'1': null
 				}
-			}
-		]
-	},
-	{
-		name: 'Program 3',
-		url: 'https://my.skills.fund/application?lenderCode=LENDERCODE3',
-		loanInfo: {
-			// match loanInfo in first metro below
-			maxLoanAmt: 15995,
-			loanTerm36: true,
-			loanTerm60: true,
-			'0': {
-				k: 5,
-				apr36: 11.16,
-				apr60: 12.51
-			},
-			'1': {
-				apr36: 11.25,
-				apr60: 12.55
-			}
-		},
-		defaultLoanType: '0', // leave at 0 for interest-only, set to 1 for immediate repayment
-		showMetros: true,
-		showLoanTypes: true,
-		locations: [ 'Metro A', 'Metro B', 'Metro C' ],
-		metros: [
-			{
-				location: 'Metro A',
-				loanInfo: {
-					// match loanInfo to Program 3 loanInfo above
-					maxLoanAmt: 15995,
-					loanTerm36: true,
-					loanTerm60: true,
-					'0': {
-						k: 5,
-						apr36: 11.16,
-						apr60: 12.51
-					},
-					'1': {
-						apr36: 11.25,
-						apr60: 12.55
-					}
-				}
 			},
 			{
-				location: 'Metro B',
-				loanInfo: {
-					maxLoanAmt: 15545,
-					loanTerm36: true,
-					loanTerm60: true,
-					'0': {
-						k: 5,
-						apr36: 11.16,
-						apr60: 12.51
-					},
-					'1': {
-						apr36: 11.25,
-						apr60: 12.55
-					}
-				}
-			},
-			{
-				location: 'Metro C',
+				location: 'Metro 3',
 				loanInfo: {
 					maxLoanAmt: 20545,
 					loanTerm36: true,
@@ -313,10 +262,7 @@ export const programLoanInfo = [
 						apr36: 11.16,
 						apr60: 12.51
 					},
-					'1': {
-						apr36: 11.25,
-						apr60: 12.55
-					}
+					'1': null
 				}
 			}
 		]
@@ -325,7 +271,7 @@ export const programLoanInfo = [
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
 export const programMaxText =
-	'Choose the loan amount that works best for you. Borrow up to $11,910 for tuition at The Coding Bootcamp at UNF.';
+	'Choose the loan amount that works best for you. Borrow up to $11,910 for tuition at The Coding Bootcamp at UNF or the Hybrid UNF Cyber Bootcamp.';
 
 export const paymentTable = {
 	headers: [ 'Program', 'Tuition', 'Cost of Living', 'Max Total' ],
