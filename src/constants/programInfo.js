@@ -88,7 +88,7 @@ export const faq = {
 
 export const schoolLogo = logo; // go to header.js if height needs adjustment
 
-export const schoolName = 'The Coding Bootcamp at UNF';
+export const schoolName = 'UNF Bootcamp';
 
 export const schoolURL = 'https://codingbootcamp.unf.edu/'; // update with url of school's website
 
