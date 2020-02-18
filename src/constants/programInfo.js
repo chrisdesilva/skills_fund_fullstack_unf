@@ -52,7 +52,7 @@ export const faq = {
 	immediateRepayment: false, // true if immediate repayment is an option
 	multipleLoanLengths: true, // true if 36 and 60 month options are both available
 	multipleLoanTypes: false, // true if both IR and IO are available
-	multiPrograms: false, // only true if there are multiple programs
+	multiPrograms: true, // only true if there are multiple programs
 	onlinePrograms: false, // true if at least one program is remote/online
 	schoolHQState: 'WA',
 	origFee: 0.04,
